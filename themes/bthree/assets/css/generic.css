@@ -85,3 +85,6 @@ h2+small,h2 a+small{top:-10px;position:relative}
 h2+.rss-aggregator{margin-top:10px;margin-left:6px}
 .frontpage .box{border-top:2px solid rgba(16,157,240,0.2)}
 .rss-aggregator+.nav-links{display:none}
+.btn{position:relative}
+.btn.btn-highlight{font-weight:600;padding:4px 0;background-color:#0095eb !important;background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#00a1ff", endColorstr="#0094ea");background-image:-khtml-gradient(linear, left top, left bottom, from(#00a1ff), to(#0094ea));background-image:-moz-linear-gradient(top, #00a1ff, #0094ea);background-image:-ms-linear-gradient(top, #00a1ff, #0094ea);background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, #00a1ff), color-stop(100%, #0094ea));background-image:-webkit-linear-gradient(top, #00a1ff, #0094ea);background-image:-o-linear-gradient(top, #00a1ff, #0094ea);background-image:linear-gradient(#00a1ff, #0094ea);border-color:#0094ea #0094ea #0091e6;color:#fff !important;text-shadow:0 -1px 0 rgba(0,0,0,0.06);-webkit-font-smoothing:antialiased}
+.btn.btn-highlight i{opacity:.9;position:absolute;right:4%;top:18%}

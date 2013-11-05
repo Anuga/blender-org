@@ -88,7 +88,7 @@ get_os();
 		// useful for sizing the #flexible container
 		
 		$('a#do_download').click(function(e){
-			// e.preventDefault(); // Comment this line out to make downloads start
+			e.preventDefault(); // UNCOMMENT TO BLOCK DOWNLOADS
 			$('.card').addClass('flip');
 			$("#flexible").animate({height:$(".thanks").height() + padding}, 300);		
 		});
@@ -382,21 +382,27 @@ get_os();
 							<h3>Go Shopping</h3>
 							Find DVDs, books, t-shirts, and more at the Blender Store. 
 							<hr/>
-							<button class="btn btn-small">Visit the Blender Store <i class="icon-external-link"></i></button>
+							<a href="<?php echo site_url(); ?>/store">
+								<button class="btn btn-highlight btn-small">Visit the Blender Store <i class="icon-shopping-cart"></i></button>
+							</a>
 						</div>
 						<div class="donate_way donation">
 							<h1><i class="icon-heart"></i></h1>
 							<h3>Direct Donation</h3>
 							Support the Blender Foundation directly via PayPal.
 							<hr/>
-							<button class="btn btn-small">Donate via PayPal <i class="icon-external-link"></i></button>
+							<a href="<?php echo site_url(); ?>/foundation/donation-payment/">
+								<button class="btn btn-highlight btn-small">Donate via PayPal <i class="icon-heart"></i></button>
+							</a>
 						</div>
 						<div class="donate_way devfund" style="margin-right: 0;">
 							<h1><i class="icon-cog"></i></h1>
 							<h3>Support Development</h3>
 							You can donate towards the Blender Development Fund.
 							<hr/>
-							<button class="btn btn-small">Donate via PayPal <i class="icon-external-link"></i></button>
+							<a href="<?php echo site_url(); ?>/foundation/development-fund/">
+								<button class="btn btn-highlight btn-small">Join the Development Fund<i class="icon-cog"></i></button>
+							</a>
 						</div>
 					</div>
 					<div class="clearfix"></div>
