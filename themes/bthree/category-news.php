@@ -35,8 +35,8 @@
 		<?php if ( have_posts() ) : ?>
 			<?php
 			while ( have_posts() ) : the_post();?>
-			<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-			<small><?php the_time('F jS, Y'); ?></small></h2>
+			<h3><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+			<small class="clearfix"><?php the_time('F jS, Y'); ?></small></h3>
 
 			<?php endwhile;
 			else: ?>
