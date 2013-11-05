@@ -16,7 +16,7 @@ if ($header_type == 'static'){
 } else if ($header_type == 'carousel'){ 
 	get_header('carousel');
 }?>
-		<div class="container">
+		<div class="container frontpage">
 			<div class="row">
 				<div class="<?=(($sidebar_type == 'sidebar') ? 'span8' : 'span12')?>">
 				<?=(($sidebar_type == 'sidebar') ? '<div class="row-fluid"><div class="span12">' : '')?>

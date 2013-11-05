@@ -19,8 +19,6 @@
 		<?php
 		if ($template_name == 'page-download') { ?>
 		<link href="<?php bloginfo( 'template_directory' ); ?>/assets/css/page_download.css" rel="stylesheet">
-		<?php } else if ($template_name == 'page-frontpage') { ?>
-		<link href="<?php bloginfo( 'template_directory' ); ?>/assets/css/page_frontpage.css" rel="stylesheet">
 		<?php } ?>
 
 		

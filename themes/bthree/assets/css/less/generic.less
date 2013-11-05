@@ -382,8 +382,68 @@ a img.thumbnail:hover { opacity: 0.9; }
 .soyadmin {float:right; color: @color_text; font-size: 150%;position: fixed; right: 17px; top: 18px; z-index: 9999; opacity: 0.3;}
 .soyadmin:hover {color: @color_link; opacity: 1.0}
 
-h2 + small {
+h2 + small,
+h2 a + small {
   top: -10px;
   position: relative;}
 
+h2 + .rss-aggregator {
+  margin-top: 10px;
+  margin-left: 6px;
+}
+
+.box .rss-aggregator {
+  margin: 10px auto 0 auto;
+  width: 96%;
+}
+
+.box .rss-aggregator li {
+  margin-top: 9px;
+  margin-left: 15px;
+  clear:both;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 20px;
+  padding-left: 10px;
+  right: 5px;
+  //border-left: 2px solid transparent;
+  color: lighten(@color_link_secondary, 25%);
+  .transition(all, 0.15s, ease-in)
+}
+
+.box .rss-aggregator li:hover {
+  //border-left: 2px solid fade(@color_link_secondary, 15%); 
+  color: @color_link_hover;
+}
+
+.box .rss-aggregator li:hover a {
+  color: @color_link_hover;
+}
+ 
+.rss-aggregator .feed-item {
+}
+
+.box .rss-aggregator li a {
+  font-size: 105%;
+}
+
+.box .rss-aggregator .feed-source {
+  font-size: 80%;
+  color: fade(@color_text, 75%)
+}
+
+.box .rss-aggregator li:after{ .transition(all, 0.2s, ease-in)}
+
+.box .rss-aggregator li:hover:after {color: @color_text;}
+
+.box .rss-aggregator li:hover .feed-source  {
+  color: fade(@color_text, 95%)
+}
+
+.frontpage .box {
+  border-top: thick solid fade(@color_link_secondary, 20%)
+}
+
+// We don't want a "Older Posts" link under News
 .rss-aggregator + .nav-links { display: none;}
