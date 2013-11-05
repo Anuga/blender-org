@@ -67,7 +67,7 @@ p+h2,p+h3,p+h4{margin-top:25px}
 .box li{margin-left:20px}
 .box .btn{min-width:90%;max-width:90%;font-weight:bold;color:rgba(68,68,68,0.5);padding-top:4px;padding-bottom:4px}
 .box .bottom{width:96%;margin:5px 10px 10px 10px}
-.box h2 [class*="icon-"],h2 [class*="icon-"]{float:right;margin-right:6%;margin-top:-2%;font-size:145%;opacity:.3}
+.box h2 [class*="icon-"],h2 [class*="icon-"]{float:right;margin-right:4.5%;margin-top:-1%;font-size:116%;opacity:.2}
 .box hr{width:95%;opacity:.6}
 .thumbnail{padding:4px;border:none;background-color:#fff;-webkit-box-shadow:1px 1px 0 rgba(68,68,68,0.25);-moz-box-shadow:1px 1px 0 rgba(68,68,68,0.25);box-shadow:1px 1px 0 rgba(68,68,68,0.25);-webkit-transition:all .1s ease-out;-moz-transition:all .1s ease-out;-o-transition:all .1s ease-out;-ms-transition:all .1s ease-out;transition:all .1s ease-out}
 a img.thumbnail:hover{opacity:.9}
