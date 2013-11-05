@@ -54,7 +54,6 @@
 			            <ul class="nav">
 		            	<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container' => '', 'items_wrap' => '%3$s') ); ?>
 			                <!-- <li class="nav pull-right"><i class="icon-search"></i></li> -->
-			                <li class="nav pull-right"><a href="<?=site_url()?>/e-shop">Store</a></li>
 		                </ul>
 			          </div><!--/.nav-collapse -->
 				    </div>
