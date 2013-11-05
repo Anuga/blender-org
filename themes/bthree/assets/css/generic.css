@@ -53,6 +53,7 @@ a.btn.external:after{content:'\f08e';float:right;font-size:75%;color:rgba(68,68,
 .card .back{position:absolute;top:0;left:0;z-index:800;width:inherit;height:inherit;background-color:#f8f8f8;padding-left:2px;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;-webkit-transform:rotateY(-180deg);-webkit-transform-style:preserve-3d;-webkit-backface-visibility:hidden;-moz-transform:rotateY(-180deg);-moz-transform-style:preserve-3d;-moz-backface-visibility:hidden;transform:perspective(800px) rotateY(-180deg);backface-visibility:hidden;-webkit-transition:all .4s ease-in-out;-moz-transition:all .4s ease-in-out;-o-transition:all .4s ease-in-out;-ms-transition:all .4s ease-in-out;transition:all .4s ease-in-out}
 .card.flip .back{z-index:1000;-webkit-transform:rotateX(0deg) rotateY(0deg);-moz-transform:rotateX(0deg) rotateY(0deg);transform:perspective(800px) rotateY(0deg)}
 .box{position:relative;background-color:#fff;min-height:390px;padding-top:10px;padding-bottom:5px;-webkit-box-shadow:1px 1px 3px rgba(95,95,95,0.25);-moz-box-shadow:1px 1px 3px rgba(95,95,95,0.25);box-shadow:1px 1px 3px rgba(95,95,95,0.25)}
+.frontpage .box{min-height:330px}
 .box p{position:relative;margin:15px}
 .box h2{margin:10px 0 0 15px;font-size:250%}
 .box h3,.box h4,.box h5{margin:5px 0 0 15px}
