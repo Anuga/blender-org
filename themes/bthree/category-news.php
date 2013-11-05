@@ -43,6 +43,7 @@
 			<p>No articles under this category.</p>
 
 			<?php endif; ?>
+			<hr/>
 		</div>
 		<div class="span8">
 			<div class="row-fluid">
