@@ -88,7 +88,7 @@ get_os();
 		// useful for sizing the #flexible container
 		
 		$('a#do_download').click(function(e){
-			e.preventDefault(); // UNCOMMENT TO BLOCK DOWNLOADS
+			//e.preventDefault(); // UNCOMMENT TO BLOCK DOWNLOADS
 			$('.card').addClass('flip');
 			$("#flexible").animate({height:$(".thanks").height() + padding}, 300);		
 		});
