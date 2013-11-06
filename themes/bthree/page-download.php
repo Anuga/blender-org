@@ -307,12 +307,6 @@ get_os();
 						<?=$choose_mirror?>
 				  	</div> <!-- .ZIP-->
 				 <div class="clearfix"></div>
-				 <div class="alert alert-info">
-				 	<i class="icon-info-sign"></i>
-				 	If the 3DConnexion device fails, you need
-				 	<a href="http://www.3dconnexion.com/supported-software/3dxlabs/3dxlabsapp.html?tx_sugar3dxsoftware_pi1%5Bapp_id%5D=bd708299-9e93-2561-3908-4d9d89cc6177">
-				 		3DxWare 10 Beta 4</a> (Mac OS X) or later!
-			 	 </div>
 			  	 </div> <!-- // OSX -->
 
 				  <!-- LINUX -->
