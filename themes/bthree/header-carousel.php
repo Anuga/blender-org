@@ -36,7 +36,7 @@ function slides($number){
     		 	</a>
     		 	<ul>
     		 		<a href="http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/' . (get_post_meta($download_page_id, 'blender_version', true)) . '"><li>What\'s New?</li></a>
-    		 		<a href="http://download.blender.org/release/"><li>Older versions</li></a>
+    		 		<a href="' . site_url() . '/download/previous-versions/"><li>Older versions</li></a>
     		 	</ul>
             </div>
             ' : '') . '
