@@ -427,14 +427,6 @@ get_os();
 				  </div>
 				</div> <!-- accordion -->
 
-				<h2>History</h2>
-
-				All past releases can be downloaded at <strong><a href="http://download.blender.org/source/">download.blender.org/source</a></strong>
-				<br/>
-				Check <strong><a href="http://download.blender.org/source/chest/">download.blender.org/source/chest</a></strong> for interesting source code from the past.
-				It has old Blender versions as well as interesting in-house software from the company that developed Blender;
-				dutch studio NeoGeo (no not the game console!).
-
 				<?php endwhile; // end of the loop. ?>
 				<?=(($sidebar_type == 'sidebar') ? '</div></div>' : '')?>
 			<? if ($sidebar_type == 'bottombar'){ ?>
