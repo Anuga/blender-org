@@ -35,7 +35,7 @@ function get_os() {
         }
     }
 	if ($os_platform == 'windows') { $os_name = 'Windows';}
-	else if ($os_platform == 'linux'){ $os_name = 'GNU / Linux'; }
+	else if ($os_platform == 'linux'){ $os_name = 'GNU/Linux'; }
 	else if ($os_platform == 'osx'){ $os_name = 'Mac OSX'; }
 }
 get_os();
@@ -248,7 +248,7 @@ get_os();
 				<ul class="nav nav-tabs">
 				  <li class="<?=($os_platform == 'windows')?'active '.$os_platform:''?>"><a id="active_windows" href="#windows" data-toggle="tab">Windows</a></li>
 				  <li class="<?=($os_platform == 'osx')?'active '.$os_platform:''?>"><a id="active_osx" href="#osx" data-toggle="tab">Mac OSX</a></li>
-				  <li class="<?=($os_platform == 'linux')?'active '.$os_platform:''?>"><a id="active_linux" href="#linux" data-toggle="tab">Linux</a></li>
+				  <li class="<?=($os_platform == 'linux')?'active '.$os_platform:''?>"><a id="active_linux" href="#linux" data-toggle="tab">GNU/Linux</a></li>
 				  <li><a id="active_source" href="#source" data-toggle="tab">Source Code</a></li>
 				</ul>
 				<div class="tab-content <?=$os_platform?>" id="tab-content">
@@ -319,7 +319,7 @@ get_os();
 				  <div class="tab-pane fade <?=($os_platform == 'linux')?'in active':''?>" id="linux">
 				  	<div class="header">
 				  		<div class="title">
-				  			<h1><i class="icon-linux"></i> Blender <?=$current_version?> for GNU / Linux</h1>
+				  			<h1><i class="icon-linux"></i> Blender <?=$current_version?> for GNU/Linux</h1>
 				  			<h4>Requires glibc 2.11. Suits most recent Linux distributions</h4>
 						</div>
 						<? download_depth_link($os_prefix_linux, 32, '-i686', '.tar.bz2', 'border-left');?>
