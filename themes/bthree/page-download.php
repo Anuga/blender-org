@@ -314,7 +314,7 @@ get_os();
 				  	<div class="header">
 				  		<div class="title">
 				  			<h1><i class="icon-linux"></i> Blender <?=$current_version?> for GNU/Linux</h1>
-				  			<h4>Requires glibc 2.11. Suits most recent Linux distributions</h4>
+				  			<h4>Requires glibc 2.11. Suits most recent GNU/Linux distributions</h4>
 						</div>
 						<? download_depth_link($os_prefix_linux, 32, '-i686', '.tar.bz2', 'border-left');?>
 						<? download_depth_link($os_prefix_linux, 64, '-x86_64', '.tar.bz2');?>
