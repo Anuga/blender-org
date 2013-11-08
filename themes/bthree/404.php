@@ -46,21 +46,21 @@
 								<div class="widget widget_text widgetable-wrap">
 									<h4 class="title widgetable-title">Blender Network</h4>
 									<div class="textwidget widgetable-content">
-										<p><a href="<?php bloginfo( 'siteurl' );  ?>/wp-content/uploads/2013/06/network.jpg"><img class="alignnone size-full wp-image-354" alt="network" src="<?php  bloginfo( 'siteurl' );  ?>/wp-content/uploads/2013/06/network.jpg" width="370" height="100" /></a></p>
+										<p><a href="http://www.blendernetwork.org/"><img class="alignnone size-full wp-image-354" alt="network" src="<?php  bloginfo( 'siteurl' );  ?>/wp-content/uploads/2013/06/network.jpg" width="370" height="100" /></a></p>
 									</div>
 								</div>
 								
 								<div class="widget widget_text widgetable-wrap">
 									<h4 class="title widgetable-title">Tears of Steel</h4>
 									<div class="textwidget widgetable-content">
-										<p><a href="<?php  bloginfo( 'siteurl' );  ?>/wp-content/uploads/2013/06/tos.jpg"><img class="alignnone size-full wp-image-355" alt="tos" src="<?php  bloginfo( 'siteurl' );  ?>/wp-content/uploads/2013/06/tos.jpg" width="370" height="100" /></a></p>
+										<p><a href="http://tearsofsteel.org/"><img class="alignnone size-full wp-image-355" alt="tos" src="<?php  bloginfo( 'siteurl' );  ?>/wp-content/uploads/2013/06/tos.jpg" width="370" height="100" /></a></p>
 									</div>
 								</div>
 								
 								<div class="widget widget_text widgetable-wrap">
 									<h4 class="title widgetable-title">Blender Conference</h4>
 									<div class="textwidget widgetable-content">
-										<p><a href="<?php bloginfo( 'siteurl' );  ?>/wp-content/uploads/2013/07/conference-2012.jpg"><img class="alignnone size-full wp-image-585" alt="conference-2012" src="<?php  bloginfo( 'siteurl' );   ?>/wp-content/uploads/2013/07/conference-2012.jpg" width="800" height="217" /></a></p>
+										<p><a href="<?php bloginfo( 'siteurl' );  ?>/conference/"><img class="alignnone size-full wp-image-585" alt="conference-2012" src="<?php  bloginfo( 'siteurl' );   ?>/wp-content/uploads/2013/07/conference-2012.jpg" width="800" height="217" /></a></p>
 									</div>
 								</div>
 						</ul>	<!-- // sidebar -->				
