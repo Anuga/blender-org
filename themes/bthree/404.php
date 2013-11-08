@@ -53,7 +53,7 @@
 								<div class="widget widget_text widgetable-wrap">
 									<h4 class="title widgetable-title">Tears of Steel</h4>
 									<div class="textwidget widgetable-content">
-										<p><a href="http://tearsofsteel.org/"><img class="alignnone size-full wp-image-355" alt="tos" src="<?php  bloginfo( 'siteurl' );  ?>/wp-content/uploads/2013/06/tos.jpg" width="370" height="100" /></a></p>
+										<p><a href="http://www.blender3d.org/e-shop/product_info_n.php?products_id=143"><img class="alignnone size-full wp-image-355" alt="tos" src="<?php  bloginfo( 'siteurl' );  ?>/wp-content/uploads/2013/06/tos.jpg" width="370" height="100" /></a></p>
 									</div>
 								</div>
 								
