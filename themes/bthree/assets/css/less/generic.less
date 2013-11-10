@@ -247,7 +247,9 @@ a.btn.external:after {
   -moz-transform: rotateX(0deg) rotateY(0deg);
   -moz-transform-style: preserve-3d;
   -moz-backface-visibility: hidden;
-  
+
+  -ms-transform: rotateY(0deg);
+  -ms-backface-visibility: hidden;
 
 	transform: perspective(800px) rotateY(0deg);
 	backface-visibility: hidden;
@@ -270,7 +272,6 @@ a.btn.external:after {
   background-color: @color_background;
   padding-left:2px;
   .box-shadow-none;
-  //.background_dots(circle, darken(@color_background,10%) 20%, fade(darken(@color_background, 5%), 60%) 20%, fade(darken(@color_background, 5%), 60%) 20%, 10px, 10px);
 
   -webkit-transform: rotateY(-180deg);
   -webkit-transform-style: preserve-3d;
@@ -279,9 +280,12 @@ a.btn.external:after {
   -moz-transform: rotateY(-180deg);
   -moz-transform-style: preserve-3d;
   -moz-backface-visibility: hidden;
-  
+
+  -ms-transform: rotateY(-180deg);
+  -ms-backface-visibility: hidden;
+
  	transform: perspective(800px) rotateY(-180deg);
-	backface-visibility: hidden; 
+	backface-visibility: hidden;
   
   .transition(all, .4s, ease-in-out)
 }
@@ -468,4 +472,12 @@ h2 + .rss-aggregator {
   position: absolute;
   right: 4%;
   top: 18%;
+}
+
+.well {
+  padding: 0 19px 19px;
+  // for backicons
+  position:relative;
+  overflow:hidden;
+  .box-shadow-none();
 }
