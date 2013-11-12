@@ -39,56 +39,55 @@ function get_os() {
 	else if ($os_platform == 'osx'){ $os_name = 'Mac OSX'; }
 }
 get_os();
-
 ?>
 <script type="text/javascript">
-
-
-
-
-
 	$(document).ready(function(){
 		var padding = 70;
 
-		/*
-			controls all of the transitions when you click different OS to download
-		*/
+		/* controls all of the transitions when you click different OS to download */
 		
 		$('#active_windows').live('click',function(){
 		 	$("#flexible").animate({height:$("#windows").height() + padding}, 200);
 		 	$(".tab-content").animate({height:$("#windows").height()}, 200);
-		    $('.tab-content').addClass('windows').removeClass('linux osx source');
-		    $('.nav-tabs li').removeClass('osx linux source');
+		    $('.tab-content').addClass('windows').removeClass('linux osx source daily');
+		    $('.nav-tabs li').removeClass('osx linux source daily');
 			$('.nav-tabs li.active').addClass('windows');
 		});
 		$('#active_osx').live('click',function(){
 			$("#flexible").animate({height:$("#osx").height() + padding}, 200);
 			$(".tab-content").animate({height:$("#osx").height()}, 200);
-		    $('.tab-content').addClass('osx').removeClass('windows linux source');
-		    $('.nav-tabs li').removeClass('windows linux source');
+		    $('.tab-content').addClass('osx').removeClass('windows linux source daily');
+		    $('.nav-tabs li').removeClass('windows linux source daily');
 			$('.nav-tabs li.active').addClass('osx');
 		});
 		$('#active_linux').live('click',function(){
 			$("#flexible").animate({height:$("#linux").height() + padding}, 200);
 			$(".tab-content").animate({height:$("#linux").height()}, 200);
-		    $('.tab-content').addClass('linux').removeClass('windows osx source');
-		    $('.nav-tabs li').removeClass('windows osx source');
+		    $('.tab-content').addClass('linux').removeClass('windows osx source daily');
+		    $('.nav-tabs li').removeClass('windows osx source daily');
 			$('.nav-tabs li.active').addClass('linux');
 		});
 		$('#active_source').live('click',function(){
 			$("#flexible").animate({height:$("#source").height() + padding}, 200);
 			$(".tab-content").animate({height:$("#source").height()}, 200);
-		    $('.tab-content').addClass('source').removeClass('windows linux osx');
-		    $('.nav-tabs li').removeClass('windows linux osx');
+		    $('.tab-content').addClass('source').removeClass('windows linux osx daily');
+		    $('.nav-tabs li').removeClass('windows linux osx daily');
 			$('.nav-tabs li.active').addClass('source');
 		});
 
-		
+		$('#active_daily').live('click',function(){
+			$("#flexible").animate({height:$("#daily").height() + padding}, 200);
+			$(".tab-content").animate({height:$("#daily").height()}, 200);
+		    $('.tab-content').addClass('daily').removeClass('windows linux osx source');
+		    $('.nav-tabs li').removeClass('windows linux osx source');
+			$('.nav-tabs li.active').addClass('daily');
+		});
+
 		// flipping the front and back cards visibility makes it easier later to determine what is actively being shown
 		// useful for sizing the #flexible container
-		
+
 		$('a#do_download').click(function(e){
-			//e.preventDefault(); // UNCOMMENT TO BLOCK DOWNLOADS
+			// e.preventDefault(); // UNCOMMENT TO DISABLE DOWNLOADS
 			$('.card').addClass('flip');
 			$("#flexible").animate({height:$(".thanks").height() + padding}, 300);		
 		});
@@ -97,15 +96,14 @@ get_os();
 			$('.card').removeClass('flip');
 			$("#flexible").animate({height:$("#tab-content div.active").height() + 120}, 200);		
 		});
-		
+
 		$("#flexible").css({height:$("#<?=$os_platform?>").height() + padding + 30});
 	});
 
-	
-	//  resize end event  ( changing window size needs to only update content after .3 seconds)
+	// resize end event  (changing window size needs to only update content after .3 seconds)
 	// sizing is sporadic if you don't add a delay
 	// http://forum.jquery.com/topic/the-resizeend-event
-	
+
 	var rtime = new Date(1, 1, 2000, 12,00,00);
 	var timeout = false;
 	var delta = 300;
@@ -122,11 +120,9 @@ get_os();
 			setTimeout(resizeend, delta);
 		} else {
 			timeout = false;			
-			
+
 			// alert('Done resizing');			
 			var padding = 30;
-			
-			
 
 			// position differently based on what layer is visible
 			// we need this logic because the height of the container will be very different depending on whether 
@@ -140,16 +136,10 @@ get_os();
 				$("#flexible").animate({height:$("#tab-content div.active").height() + padding}, 200);					
 				$("#tab-content").animate( { height: $("#tab-content div.active").height()  + padding }, 200   );
 			}
-			
-			$("#flexible").css('marginBottom',100 );	
-		
-			
-		}               
-	}	
-	
-	
-	
-	
+
+			$("#flexible").css('marginBottom',100 );
+		}
+	}
 </script>
 		<div class="container download">
 			<div class="row">
@@ -231,7 +221,7 @@ get_os();
 					<div class="introduction">
 						<h1>Download Blender <?=$current_version?> <small>for</small> <?=$os_name?></h1>
 						<p>
-						Blender <?=$current_version?> is the latest release from the <a href="<?=get_site_url() . '/foundation'?>">Blender Foundation</a>.
+						Blender <?=$current_version?> is the latest stable release from the <a href="<?=get_site_url() . '/foundation'?>">Blender Foundation</a>.
 						<br/>To download it, please select your platform and location. Blender is Free & Open Source Software.
 						<br/><br/>
 						Blender <?=$current_version?> was released on <?=$release_date?>
@@ -250,6 +240,7 @@ get_os();
 				  <li class="<?=($os_platform == 'osx')?'active '.$os_platform:''?>"><a id="active_osx" href="#osx" data-toggle="tab">Mac OSX</a></li>
 				  <li class="<?=($os_platform == 'linux')?'active '.$os_platform:''?>"><a id="active_linux" href="#linux" data-toggle="tab">GNU/Linux</a></li>
 				  <li><a id="active_source" href="#source" data-toggle="tab">Source Code</a></li>
+				  <li><a id="active_daily" href="#daily" data-toggle="tab">Daily Builds</a></li>
 				</ul>
 				<div class="tab-content <?=$os_platform?>" id="tab-content">
 
@@ -282,7 +273,7 @@ get_os();
 				 <div class="clearfix"></div>
 				 <div class="alert alert-info">
 				 	<i class="icon-info-sign"></i>
-				 	If the application reports an error on startup, please install the Visual C++ 2008 Redistributable Package.
+				 	If Blender reports an error on startup, please install the Visual C++ 2008 Redistributable Package.
 				 	<a href="http://www.microsoft.com/en-us/download/details.aspx?id=29">32bit</a> / 
 				 	<a href="http://www.microsoft.com/en-us/download/details.aspx?id=15336">64bit</a>
 			 	 </div>
@@ -362,6 +353,26 @@ get_os();
 				<br/>
 				</div><!-- // SOURCE-->
 
+				  <!-- DAILY BUILDS -->
+				  <div class="tab-pane fade" id="daily">
+				  	<div class="header">
+				  		<div class="title">
+				  			<h1><i class="icon-rocket"></i> Bleeding Edge</h1>
+							Do you like the taste of danger in the morning? We got exactly what you need, daily builds.
+							<br/><br/>
+							Discover the latest features, often undocumented, unstable, and full of surprises.
+							There might be cool bug fixes too, but we do <strong>not</strong> recommend
+							to use this builds on production environments though.
+							
+							These are automatically built on our servers just like regular stable releases,
+							but instead they use the latest snippets of magic code developers write. Every single day.
+							<br/><br/>
+							With great power comes great responsibility, go grab your daily build at the <a href="http://developer.blender.org/buildbot">developers corner</a>. 
+						</div>
+				  	</div>
+				 <div class="clearfix"></div>
+				</div><!-- // DAILY BUILDS-->
+
   				<div class="clearfix"></div>
 				</div> <!-- // TABS -->
 			</div><!-- front -->
@@ -406,26 +417,26 @@ get_os();
 			</div><!-- Flipity Flip! -->
 			</div><!-- //relative parent-->
 				<div class="clearfix"></div>
-				<div class="accordion" id="accordion_windows">
-				  <div class="accordion-group">
-				    <div class="accordion-heading">
-				      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_windows" href="#collapse_one">
-				        <h3>How do I install Blender?</h3>
-				      </a>
-				    </div>
-				    <div id="collapse_one" class="accordion-body collapse">
-				      <div class="accordion-inner">
-				        To install Blender, download the appropriate package for your platform to your computer.
-				        The Windows version comes with an optional self-extracting installer,
-				        for other operating systems you can unpack the compressed file to the location of your choice.  
+				<div class="well">
+					<i class="backicon icon-info-sign"></i>
+			        <h3>How do I install Blender?</h3>
+			        To install Blender, download the appropriate package for your platform.
+			        The Windows version comes with an optional self-extracting installer,
+			        for other operating systems you can simply unpack the compressed file to the location of your choice.  
+					<br/><br/>
+					Provided the Blender binary is in the original extracted directory,
+					Blender will run straight out of the box. No system libraries or system preferences are altered.
+				</div>
 
-						Provided the Blender binary is in the original extracted directory,
-						Blender will run straight out of the box.
-						No system libraries or system preferences are altered.
-				      </div>
-				    </div>
-				  </div>
-				</div> <!-- accordion -->
+				<div class="well">
+					<i class="backicon icon-info-sign"></i>
+			        <h3>Bleeding Edge</h3>
+			        Try the latest in Blender development with daily builds.
+					<div class="alert alert-danger">
+						<i class="icon-warning"></i>
+						Warning: these builds are not as stable as releases, use at your own risk.
+					</div>
+				</div>
 
 				<?php endwhile; // end of the loop. ?>
 				<?=(($sidebar_type == 'sidebar') ? '</div></div>' : '')?>

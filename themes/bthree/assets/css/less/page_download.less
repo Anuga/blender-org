@@ -16,6 +16,8 @@
 }
 
 .tab-content a {color: white}
+.tab-content.daily a {color: saturate(lighten(@color_os_daily, 40%), 40%);}
+.tab-content.daily a:hover {color: saturate(lighten(@color_os_daily, 50%), 60%);}
 
 .nav-tabs>li>a:hover {background-color: fade(@color_text_secondary, 10%)}
 .nav-tabs>li.active {font-weight: bold;}
@@ -24,12 +26,14 @@
 .windows {background-color: @color_os_windows;}
 .osx {background-color: @color_os_osx;}
 .linux {background-color: @color_os_linux;}
-.source {background-color: @color_os_source;}  
+.source {background-color: @color_os_source;}
+.daily {background-color: @color_os_daily;}  
 
 .tab-content.windows {border-bottom: thick solid darken(@color_os_windows, 10%);}
 .tab-content.osx {border-bottom: thick solid darken(@color_os_osx, 10%);}
 .tab-content.linux {border-bottom: thick solid darken(@color_os_linux, 10%);}
 .tab-content.source {border-bottom: thick solid darken(@color_os_source, 10%);}
+.tab-content.daily {border-bottom: thick solid darken(@color_os_daily, 10%);}
 
 .tab-content .header {
   width: 100%;
@@ -326,10 +330,7 @@
 }
 .release_candidate .rc_logs {border:none;}
 
-
 /* mobile specific styless */
-
-
 @media(max-width: 1199px) {  
 	.download .header .depth .depth_text{
 		right: -10%;
@@ -339,49 +340,40 @@
 		top: 67%;
 		display:none;
 	}
-	
+
 	 /* Congratulations sections*/
-	 
+
 	 .thanks .donations .donate_way {
 		max-width:23%; 
 	 }
-	 
+
 	 .thanks {
          height: 521px;
 	}
-	 
+
 	 .thanks .donations .donate_way {
 		min-height: 330px;
 	 }
-	
 }
-
-
 
 @media(max-width: 979px) {  
 
-
-.download .header .title {
-width: 100%;
-}
-
-
-	 
+  .download .header .title {
+    width: 100%;
+  }
 	 .download .header .depth .depth_text,  .download .header .depth .depth_icon{
 		left: 10px;
 		
 	 }
 	 
-	 	.download .package .links, .download .header .depth {
-	width: 22%;
+  .download .package .links, .download .header .depth {
+    width: 22%;
 	}
-	 
-	 
+
 	 .download .header .border-left {
 	   border-left: none;
 	 }
-	 
-	 	 
+
 	.thanks .donations .donate_way {
 		float: none;
 		margin: 1em 0;
@@ -389,13 +381,11 @@ width: 100%;
 		min-height: 0;
 		padding-bottom: 1em;
 	}	
-		 
+
 	.thanks {
 		height: auto;
 	}	
-		 
 }
-
 
 /* the words "bit" in 64 bit starts getting cut off here, so trigger 100% width level for everything */
 @media(max-width: 410px) {  
@@ -403,24 +393,21 @@ width: 100%;
   .download .header .depth {
 	  width:100%;
 	}
-	  
-.download .package li{
+
+  .download .package li{
     font-size: 147%;
     line-height: 228%;
     margin-left: 1em;
     text-align: left;
-}
+  }
 
 	.download .package .links{
 	width: 100%;
 	margin-left: 1.0em;
 	}
-	  
-		  
+  
 	.download .package h2{
 		font-size: 163%;
 		margin: 20px 0 0 9px;
-	}	 
-	  
-  
-  }
+	}
+}
