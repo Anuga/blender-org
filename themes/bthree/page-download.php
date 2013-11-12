@@ -428,16 +428,6 @@ get_os();
 					Blender will run straight out of the box. No system libraries or system preferences are altered.
 				</div>
 
-				<div class="well">
-					<i class="backicon icon-info-sign"></i>
-			        <h3>Bleeding Edge</h3>
-			        Try the latest in Blender development with daily builds.
-					<div class="alert alert-danger">
-						<i class="icon-warning"></i>
-						Warning: these builds are not as stable as releases, use at your own risk.
-					</div>
-				</div>
-
 				<?php endwhile; // end of the loop. ?>
 				<?=(($sidebar_type == 'sidebar') ? '</div></div>' : '')?>
 			<? if ($sidebar_type == 'bottombar'){ ?>
