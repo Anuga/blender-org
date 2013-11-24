@@ -20,27 +20,28 @@
 		if ($template_name == 'page-download') { ?>
 		<link href="<?php bloginfo( 'template_directory' ); ?>/assets/css/page_download.css" rel="stylesheet">
 		<?php } ?>
+		<link href="<?php bloginfo( 'template_directory' ); ?>/assets/css/shadowbox.css" rel="stylesheet">
 
-		
 		<!-- Fav and touch icons -->
 		<link rel="shortcut icon" href="<?php bloginfo( 'template_directory' ); ?>/assets/images/favicon.ico">
 		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php bloginfo( 'template_directory' ); ?>/assets/ico/apple-touch-icon-144-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php bloginfo( 'template_directory' ); ?>/assets/ico/apple-touch-icon-114-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php bloginfo( 'template_directory' ); ?>/assets/ico/apple-touch-icon-72-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" href="<?php bloginfo( 'template_directory' ); ?>/assets/ico/apple-touch-icon-57-precomposed.png">
-		
-		
+
 		<!-- Javascript usually placed at the end of the document. There is inline jQuery, so it needs to be defined at the top  to understand common events (ie document.ready) -->
 		<!-- The libs.js holds all of the main libraries that the site uses in minified format -->
 		<script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/libs.js"></script>
-
+		<!-- Shadowbox is a web-based media viewer application that supports all of the web's most popular media publishing formats. -->
+		<script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/shadowbox.js"></script>
+		<script type="text/javascript">
+		Shadowbox.init();
+		</script>
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
 		  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->			
-		
-		
-		
+
 	</head>
 
 	<body>
