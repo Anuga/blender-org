@@ -327,8 +327,8 @@ get_os();
 				  		<div class="title">
 				  			<h1><i class="blicon-logo-blender"></i> Source Code for Blender <?=$current_version?></h1>
 							There are multiple ways to get the source code for blender. 
-							If you are going to actually try to use the source code you should really use svn to checkout the latest version. 
-							If this is of interest to you, check out our getting involved section.
+							If you are going to actually try to use the source code you should really use Git to checkout the latest version. 
+							If this is of interest to you, see our <a href="http://www.blender.org/get-involved/developers/">getting involved with development</a> section.
 							<br/><br/>
 						</div>
 				  	</div>
