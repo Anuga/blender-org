@@ -14,15 +14,31 @@
 
 .full .carousel .item {min-height: (@carousel_height * 1.8);}
 .full .carousel-caption {top: ((@carousel_height * 1.8) / 4.5);}
-.full .carousel-caption.bottom {top: @carousel_height + 60;}
+.full .carousel-caption.bottom {top: @carousel_height + 20;}
 .full .carousel-caption.center {top: (@carousel_height / 2);} 
 
-.full .carousel-indicators {top: 555px;}
-
+.full .carousel-indicators {top: (@carousel_height * 1.8);}
+ 
 
 /* for mobile ( anything under 768px */
-
 @media(max-width:767px){
+  .hero-unit {
+    font-size: 120%;
+  }
+
+  .page {
+    margin-top: auto;
+  }
+
+  .navbar-inner {
+   margin-right: 50px; 
+  }
+  
+  .navbar .btn-navbar {
+    position: absolute;
+    right: 0;
+  }
+
   .sitemap .span3{
     float:left;
 	padding-left: 2em;
@@ -54,18 +70,16 @@ position: relative;  /* stops the text from going under the homepage section but
 } 
 
 .full .carousel .item {
-   min-height: 360px;
+   min-height: 260px;
   }
-  
+
  .carousel .item {
 min-height: 200px;
 } 
-  
-  
+
 .download_panel {
-top: 260px;
-width: 100%;
-float: left;
+  top: 190px;
+  margin-right: 10px;
 }
 
 .download_panel .btn {
@@ -73,11 +87,9 @@ font-size: 100%;
 }
 
 .download_panel ul {
-clear: both;
+clear: right;
 float: left;
 }
-
-
   
  .full .carousel-caption.bottom {
 top: 10px;
@@ -85,25 +97,22 @@ left: 10px;
 margin-right: 20px;
 position: absolute;
 } 
-  
-  
+
   .header {
   position: relative;
   }
-  
-  
+
   .soyadmin { /* don't need to be logging in when you are on a small mobile device)*/
     display:none;
   }
-  
-  
-  	.carousel-caption h1 {
+
+  .carousel-caption h1 {
 	   font-size: 200%;
-	   text-shadow: 2px 2px 5px #000000;
+	   text-shadow: 1px 1px 2px black;
 	}
   
  .carousel-caption .lead{
-  font-size: 70%;
+  font-size: 85%;
   max-width: 300px;
   margin-bottom: 20px;
   margin-right: 20px;
@@ -113,8 +122,7 @@ position: absolute;
  top: 10px;
  left: 10px;
  }
- 
-  
+
   .header_static .container .panel {
   margin: 0;
   top: 0;
@@ -125,23 +133,22 @@ position: absolute;
     font-size: 270%;
     text-shadow: 2px 2px 5px #000000;
   }
-  
-  
+
   .subnav .second-level .nav > li, .subnav .third-level .nav > li {
   width: 100%;
   }
   
-  
-  
-  
+  .box {
+  min-height:  120px;
+  }
 }
 
 
 /* for widths between full size and mobile */
 
 @media(min-width:768px) and (max-width: 1199px){
-    .box {
-  min-height:  520px;
+  .box {
+  min-height:  440px;
   }
     
 .carousel-caption h1 {
@@ -158,6 +165,11 @@ font-size: 250%;
 	
 }
 
+/* The last step before going mobile, bootstraps uses it*/ 
+@media (max-width: 979px) and (min-width: 768px) {
+  .box { min-height:  520px; }
+}
+
 /* Override Stuff */
 .header a.logo {
   width: 123px;
@@ -165,33 +177,3 @@ font-size: 250%;
   background-size: 123px 36px;
   top: -2px;
 }
-
- 
- 
-/*   
-
-header.entry-header { 
-  margin-left: 20px;
-}
-
-@media(min-width: 1200px){
-  header.entry-header {
-    margin-left: 30px;
-  }
-}
-
-@media(max-width: 979px) and (min-width: 768px) {
-  header.entry-header {
-    margin-left: 20px;
-  }
-  
-
-  
-}
-
-@media (max-width: 767px){
-  header.entry-header {
-    margin-left: 0;
-  }
-}
-*/
