@@ -44,6 +44,11 @@
 
 			<?php endif; ?>
 			<hr/>
+			<span class="right" style="margin-right: 10px">
+				<a href="http://archive.blender.org/news-archive/index.html" title="Read past news on archive.blender.org">
+					<small><i class="icon-archive"></i> News Archive</small>
+				</a>
+			</span>
 		</div>
 		<div class="span8">
 			<div class="row-fluid">
