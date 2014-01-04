@@ -65,7 +65,7 @@
 			<div class="row-fluid">
 				<div class="span6 box">
 					<h2>BlenderNation<small class="clearfix">Community News</small></h2>
-					<?php echo do_shortcode('[wp_rss_aggregator source="1589" limit="5"]'); ?>
+					<?php echo do_shortcode('[wp-rss-aggregator source="2579" limit="5"]'); ?>
 				<hr/>
 				</div>
 				<div class="span6 box">
