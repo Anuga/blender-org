@@ -44,6 +44,11 @@
 
 			<?php endif; ?>
 			<hr/>
+			<span class="right" style="margin-right: 10px">
+				<a href="http://archive.blender.org/news-archive/index.html" title="Read past news on archive.blender.org">
+					<small><i class="icon-archive"></i> News Archive</small>
+				</a>
+			</span>
 		</div>
 		<div class="span8">
 			<div class="row-fluid">
@@ -60,7 +65,7 @@
 			<div class="row-fluid">
 				<div class="span6 box">
 					<h2>BlenderNation<small class="clearfix">Community News</small></h2>
-					<?php echo do_shortcode('[wp_rss_aggregator source="1589" limit="5"]'); ?>
+					<?php echo do_shortcode('[wp-rss-aggregator source="2579" limit="5"]'); ?>
 				<hr/>
 				</div>
 				<div class="span6 box">
